@@ -1,0 +1,12 @@
+@mixin stroke-left {
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 30px;
+        background-color: #ADADAD;
+        top: 50%;
+        transform: translateX(-40px);
+    }
+}
