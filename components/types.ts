@@ -15,3 +15,12 @@ export interface socialLinkType {
 export interface aboutType {
     paragraph: string,
 }
+
+export interface experienceType {
+    experience_inputs: {content:string}[]
+    image: string
+    title: string
+    name: string
+    start: string
+    end: string
+}

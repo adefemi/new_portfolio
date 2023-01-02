@@ -7,6 +7,7 @@ $sansFont: 'Open Sans', sans-serif;
 
 $greenColor: #024441;
 $lightHomeBg: #DBEEED;
+$bg: #FFF8ED;
 
 *{
     box-sizing: border-box;
@@ -35,6 +36,17 @@ $lightHomeBg: #DBEEED;
 
 .about-bg{
     background-color: $greenColor;
+}
+
+.exp-bg{
+    background-color: $bg;
+}
+
+.expTitle{
+    text-align: center;
+    margin-top: 50px;
+    font-weight: 500;
+    color: rgba(black, 70%);
 }
 
 .bgSpline{

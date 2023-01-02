@@ -1,5 +1,5 @@
 import axios, {AxiosError} from "axios"
-import { aboutType, homeDataType, socialLinkType } from "./types"
+import { aboutType, experienceType, homeDataType, socialLinkType } from "./types"
 
 const baseUrl = "https://api.adefemigreat.com/portfolio-path/"
 
@@ -32,6 +32,20 @@ export const getSocialLinks = async (): Promise<socialLinkType[] | []> => {
 
 export const getAboutParagraphs = async (): Promise<aboutType[] | []> => {
     const resp = await axios.get(baseUrl + "aboutcontent/").catch(
+        (error: AxiosError) => {
+            console.log(error)
+        }
+    )
+
+    if(resp){
+        return resp.data
+    }
+
+    return []
+}
+
+export const getExperiences = async (): Promise<experienceType[] | []> => {
+    const resp = await axios.get(baseUrl + "experience/").catch(
         (error: AxiosError) => {
             console.log(error)
         }
