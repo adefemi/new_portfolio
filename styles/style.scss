@@ -154,6 +154,24 @@ $bg: #FFF8ED;
         .menu-item:last-child {
             margin-right: 0;
         }
+
+        .menu-item {
+            a {
+                color: #8d8d8d;
+            }
+
+            &.active {
+                a {
+                    color: black;
+                }
+
+                &::before {
+
+                    background-color: black;
+
+                }
+            }
+        }
     }
 
     &.dark {
