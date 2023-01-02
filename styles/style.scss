@@ -9,76 +9,117 @@ $greenColor: #024441;
 $lightHomeBg: #DBEEED;
 $bg: #FFF8ED;
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: $sansFont;
 }
 
-.container{
+.container {
     min-height: 100vh;
     width: 100%;
 }
 
-.demacation{
+.demacation {
     max-width: 1200px;
     margin: auto;
     position: relative;
     z-index: 1;
 }
 
-.home-bg{
+.home-bg {
     background-color: #ECFFFE;
     max-height: 100vh;
     overflow: hidden;
 }
 
-.about-bg{
+.about-bg {
     background-color: $greenColor;
+
+    .bodyContent {
+        display: block;
+        margin-top: 50px;
+
+        .title {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: rgba(white, 63%);
+            @include stroke-left;
+        }
+
+        .context {
+            padding: 20px 30px;
+            background-color: rgba(black, 25%);
+            margin-top: 20px;
+
+            p {
+                color: white;
+                padding-bottom: 10px;
+                line-height: 24px;
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+    }
 }
 
-.exp-bg{
+.exp-bg {
     background-color: $bg;
 }
 
-.expTitle{
+.projects-bg {
+    background-color: #f6f6f6;
+    overflow-y: auto;
+    padding-bottom: 50px;
+
+    .bodyContent {
+        .title {
+            color: #717171;
+        }
+    }
+}
+
+.expTitle {
     text-align: center;
     margin-top: 50px;
     font-weight: 500;
     color: rgba(black, 70%);
 }
 
-.bgSpline{
+.bgSpline {
     position: fixed;
     left: 0;
     bottom: 0;
     right: 0;
     top: 0;
 
-    &.aboutSpline{
-        path{
+    &.aboutSpline {
+        path {
             stroke: rgba(white, 0.04);
         }
     }
 }
 
-.menu-item{
+.menu-item {
     margin-right: 40px;
     font-size: 14px;
     font-weight: 500;
-    a{
+
+    a {
         text-decoration: none;
         color: #424242;
     }
 
-    &.active{
-        a{
+    &.active {
+        a {
             color: black;
         }
 
         position: relative;
-        &::before{
+
+        &::before {
             content: "";
             position: absolute;
             width: 1px;
@@ -90,7 +131,7 @@ $bg: #FFF8ED;
     }
 }
 
-.logo{
+.logo {
     font-family: $poiretFont;
     font-size: 24px;
     -webkit-text-stroke-width: 1px;
@@ -98,7 +139,7 @@ $bg: #FFF8ED;
     letter-spacing: 3px;
 }
 
-.header{
+.header {
     height: 80px;
     display: flex;
     align-items: center;
@@ -106,32 +147,32 @@ $bg: #FFF8ED;
     position: relative;
     z-index: 1;
 
-    .menu{
+    .menu {
         display: flex;
         align-items: center;
 
-        .menu-item:last-child{
+        .menu-item:last-child {
             margin-right: 0;
         }
     }
 
-    &.dark{
-        .logo{
+    &.dark {
+        .logo {
             color: white;
             -webkit-text-stroke-color: white;
         }
 
-        .menu-item{
-            a{
+        .menu-item {
+            a {
                 color: #A0A0A0;
             }
 
-            &.active{
-                a{
+            &.active {
+                a {
                     color: white;
                 }
-    
-                &::before{
+
+                &::before {
 
                     background-color: white;
 
@@ -141,21 +182,21 @@ $bg: #FFF8ED;
     }
 }
 
-.bodyContent{
+.bodyContent {
     display: flex;
 
-    .infoArea{
+    .infoArea {
         flex: 5;
         padding-top: 18vh;
 
-        h4{
+        h4 {
             font-size: 14px;
             font-weight: 500;
             margin-bottom: 20px;
             @include stroke-left;
         }
 
-        h1{
+        h1 {
             font-size: 36px;
             font-family: $poiretFont;
             -webkit-text-stroke: 1px;
@@ -166,7 +207,7 @@ $bg: #FFF8ED;
             line-height: 50px;
         }
 
-        p{
+        p {
             color: #464646;
             max-width: 650px;
             letter-spacing: 1px;
@@ -175,42 +216,42 @@ $bg: #FFF8ED;
         }
     }
 
-    .visualArea{
+    .visualArea {
         flex: 3;
         transform: translateY(-80px);
 
-        .cover{
+        .cover {
             border-bottom-left-radius: 68px;
             border-bottom-right-radius: 68px;
             overflow: hidden;
             background-color: $lightHomeBg;
-            
+
         }
 
-        .homeImage{
+        .homeImage {
             width: 100%;
             margin-top: 30vh;
             height: 420px;
             transform: translateY(10px);
         }
 
-        .social-container{
+        .social-container {
             margin-top: 40px;
             display: flex;
             align-items: center;
             justify-content: space-between;
 
-            .info{
+            .info {
                 font-size: 14px;
                 font-weight: 500;
                 @include stroke-left;
             }
 
-            .social-links{
+            .social-links {
                 display: flex;
                 align-items: center;
 
-                .link-item{
+                .link-item {
                     width: 50px;
                     height: 50px;
                     border-radius: 50%;
@@ -220,7 +261,7 @@ $bg: #FFF8ED;
                     align-items: center;
                     justify-content: center;
 
-                    &:last-child{
+                    &:last-child {
                         margin-right: 0;
                     }
                 }
@@ -230,7 +271,7 @@ $bg: #FFF8ED;
 }
 
 
-button{
+button {
     height: 45px;
     display: flex;
     align-items: center;
@@ -243,29 +284,86 @@ button{
     border: none;
 }
 
-.about-bg{
-    .bodyContent{
-        display: block;
-        margin-top: 50px;
-        .title{
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 20px;
-            color: rgba(white, 63%);
-            @include stroke-left;
-        }
+.content-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+}
 
-        .context{
-            padding: 20px 30px;
-            background-color: rgba(black, 25%);
-            margin-top: 20px;
+.project-card {
+    background-size: cover;
+    width: 100%;
+    background-color: gray;
+    height: 550px;
+    background-position: center;
+    border: 1px solid rgba(black, 10%);
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+
+    .main-content {
+        padding: 30px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .top-content{
+            display: flex;
+            color: white;
+            align-items: center;
+            justify-content: space-between;
+
+            h3{
+                font-size: 16px;
+                font-weight: 600;
+            }
 
             p{
-                color: white;
-                padding-bottom: 10px;
-                line-height: 24px;
                 font-size: 14px;
-                font-weight: 500;
+                color: darken(white, 10%);
+                margin-top: 5px;
+            }
+
+            .link{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: white;
+                cursor: pointer;
+            }
+        }
+
+        .bottomSection{
+            .gear{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .tools{
+        position: absolute;
+        width: 60%;
+        height: 70%;
+        overflow-y: auto;
+        left: 50%;
+        top: 50%;
+        background-color: rgba(black, 90%);
+        box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+        padding: 20px;
+        transform: translate(-50%, -50%);
+        color: white;
+        border-radius: 15px;
+        ul{
+            margin-left: 15px;
+            margin-top: 10px;
+
+            li{
+                margin-bottom: 10px;
             }
         }
     }
