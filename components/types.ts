@@ -24,3 +24,11 @@ export interface experienceType {
     start: string
     end: string
 }
+
+export interface projectType {
+    tool: {name:string}[]
+    title: string
+    about: string
+    cover: string
+    link: string
+}

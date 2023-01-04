@@ -36,10 +36,48 @@ $bg: #FFF8ED;
 
 .about-bg{
     background-color: $greenColor;
+
+    .bodyContent{
+        display: block;
+        margin-top: 50px;
+        .title{
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: rgba(white, 63%);
+            @include stroke-left;
+        }
+
+        .context{
+            padding: 20px 30px;
+            background-color: rgba(black, 25%);
+            margin-top: 20px;
+
+            p{
+                color: white;
+                padding-bottom: 10px;
+                line-height: 24px;
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+    }
 }
 
 .exp-bg{
     background-color: $bg;
+}
+
+.project-bg{
+    background-color: #f6f6f6;
+    overflow-y: auto;
+    padding-bottom: 50px;
+
+    .bodyContent{
+        .title{
+            color: #717171;
+        }
+    }
 }
 
 .expTitle{
@@ -243,29 +281,86 @@ button{
     border: none;
 }
 
-.about-bg{
-    .bodyContent{
-        display: block;
-        margin-top: 50px;
-        .title{
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 20px;
-            color: rgba(white, 63%);
-            @include stroke-left;
-        }
+.content-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+    margin-top: 50px;
+}
 
-        .context{
-            padding: 20px 30px;
-            background-color: rgba(black, 25%);
-            margin-top: 20px;
+.project-card{
+    background-size: cover;
+    width: 100%;
+    background-color: gray;
+    height: 550px;
+    background-position: center;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+
+    .main-content{
+        padding: 30px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .topContent{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+
+            h3{
+                font-size: 16px;
+                font-weight: 600;
+            }
 
             p{
-                color: white;
-                padding-bottom: 10px;
-                line-height: 24px;
                 font-size: 14px;
-                font-weight: 500;
+                color: darken(white, 10%);
+                margin-top: 5px;
+            }
+
+            .link{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                background-color: white;
+            }
+        }
+
+        .bottomContent{
+            .gear{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .tools{
+        position: absolute;
+        width: 60%;
+        height: 70%;
+        overflow-y: auto;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(black, 90%);
+        box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+        padding: 20px;
+        color: white;
+        border-radius: 15px;
+
+        ul{
+            margin-top: 10px;
+            margin-left: 15px;
+
+            li{
+                margin-bottom: 10px;
             }
         }
     }
