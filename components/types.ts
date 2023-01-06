@@ -32,3 +32,9 @@ export interface projectType {
     cover: string
     link: string
 }
+
+export interface blogType {
+    title: string
+    cover: string
+    link: string
+}

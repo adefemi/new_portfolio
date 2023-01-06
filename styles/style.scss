@@ -80,6 +80,10 @@ $bg: #FFF8ED;
     }
 }
 
+.blog-bg{
+    background-color: #fef5f8;
+}
+
 .expTitle{
     text-align: center;
     margin-top: 50px;
@@ -362,6 +366,32 @@ button{
             li{
                 margin-bottom: 10px;
             }
+        }
+    }
+}
+
+.blog-card{
+    background-size: cover;
+    width: 100%;
+    background-color: gray;
+    height: 320px;
+    background-position: center;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+
+    .description{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 40px 20px;
+        background: linear-gradient(transparent, rgba(black, 0.8), black);
+
+        a{
+            color: white;
+            font-size: 18px;
         }
     }
 }
