@@ -33,7 +33,7 @@ const BlogCard = ({ blog }: { blog: blogType }) => {
   return <div className="blog-card" style={{ backgroundImage: `url('${blog.cover}')` }}>
     <div className="description">
       <a href={blog.link} target="_blank">
-        <h3>{blog.title}</h3>
+      {blog.title}
       </a>
     </div>
   </div>
