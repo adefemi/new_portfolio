@@ -10,6 +10,10 @@ $greedExp: #0C928B;
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: $bg;
+
+    @media screen and (max-width: 768px){
+        grid-template-columns: 1fr;
+    }
 }
 
 .pathContainer{
@@ -20,6 +24,11 @@ $greedExp: #0C928B;
     margin-top: 2px;
     transform: translateX(29px);
 
+    @media screen and (max-width: 768px){
+        max-width: unset;
+        transform: unset;
+    }
+
     .c-logo{
         width: 80px;
         height: 80px;
@@ -28,6 +37,14 @@ $greedExp: #0C928B;
         border-radius: 50%;
         margin-right: 20px;
         background-size: contain;
+
+        @media screen and (max-width: 768px){
+            width: 15vw;
+            height: 15vw;
+            max-width: 80px;
+            max-height: 80px;
+            margin-right: 10px;
+        }
     }
 
     .path{
@@ -186,6 +203,42 @@ $greedExp: #0C928B;
                 }
             }
         }
+
+
+        @media screen and (max-width: 768px){
+            width: calc(100% - (15vw + 10px) - 50px);
+
+            .extender{
+
+                &::after{
+                    display: none;
+                }
+
+                &::before{
+                    transform: translate(-2px, -4px);
+                }
+            }
+
+            .headerPath{
+                margin-bottom: 5px;
+                
+                .title{
+                    font-size: 14px;
+                }
+    
+                p{
+                    font-size: 12px;
+                }
+            }
+    
+            .contextPath{
+                font-size: 12px;
+    
+                li{
+                    line-height: 20px;
+                }
+            }
+        }
     }
 
     &.flip{
@@ -209,6 +262,30 @@ $greedExp: #0C928B;
             .cover{
                 .dateShower{
                     transform: rotateY(-180deg) translate(47%, -50%);
+                }
+            }
+        }
+
+        @media screen and (max-width: 768px){
+            transform: unset;
+
+            .c-logo{
+                transform: unset;
+            }
+
+            .headerPath, .contextPath{
+                transform: unset;
+            }
+    
+            .contextPath{
+                right: unset;
+            }
+    
+            .path{
+                .cover{
+                    .dateShower{
+                        transform: translate(-47%, -50%);
+                    }
                 }
             }
         }
