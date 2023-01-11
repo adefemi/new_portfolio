@@ -36,7 +36,7 @@ const BodyContent = ({homeData, socialLinks}: contentType) => (
       <Image width="300" height="300" className='homeImage' alt='adefemi-image' src={homeData.user_image} />
       </div>
       <div className="social-container">
-        <div className="info">connect with me</div>
+        <div className="info mobile">connect with me</div>
         <div className="social-links">
           {socialLinks.map((item, index) => <SocialLink item={item} key={index} />)}
         </div>
