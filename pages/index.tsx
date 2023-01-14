@@ -46,7 +46,7 @@ const BodyContent = ({homeData, socialLinks}: contentType) => (
 )
 
 const SocialLink = ({item}:{item: socialLinkType}) => (
-  <a href={item.link} target="_blank" className="link-item">
+  <a href={item.link} target="_blank" className="link-item" rel="noreferrer">
       <Image width="24" height="24" alt={item.name} src={item.icon} />
   </a>
 )
