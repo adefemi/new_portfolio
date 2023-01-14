@@ -41,7 +41,7 @@ const ProjectCard = ({project}:{project: projectType}) => {
           <h3>{project.title}</h3>
           <p>{project.about}</p>
         </div>
-        <a href={project.link} target="_blank" className='link' rel="noreferrer">
+        <a href={project.link} target="_blank" className='link'>
           <LinkArrowSvg />
         </a>
       </div>
