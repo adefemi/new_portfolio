@@ -1,3 +1,4 @@
+import Head from "next/head"
 import Link from "next/link"
 import { useState } from "react"
 import { MenuClose, MenuOpen } from "./svgs"
@@ -28,6 +29,10 @@ const Header = ({active, isDark}: {active: string, isDark?: boolean}) => {
     ]
 
     return <div className={`header ${isDark ? 'dark' : ''}`}>
+        <Head>
+            <title>Adefemigreat, the Portfolio</title>
+            <meta name="description" content="Checkout my insights, experience, projects, and exploration. Finally, reach out to me if you want to make the world a better place through me." />
+        </Head>
         <Logo />
         <div className="menu mobile">
             {menuItems.map((item, index) => <MenuItem {...item} key={index} active={active}/>)}
