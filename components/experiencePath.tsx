@@ -46,7 +46,7 @@ const ExperiencePath = ({isFlip, isClosed, title, position, cover, spaceTop=20, 
                 <div />
             </>
         }
-        <div className={`pathContainer ${isFlip ? 'flip' : ''}`} style={{marginTop: spaceTop==20 ? 2 : finalSpacer - offset}}>
+        <div className={`pathContainer ${isFlip ? 'flip' : ''}`} style={{marginTop: spaceTop==20 ? 2 : finalSpacer + offset}}>
             <div className="c-logo" style={{backgroundImage: `url('${cover}')`}}></div>
             <div className="path">
                 <div className="headerPath">

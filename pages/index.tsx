@@ -29,7 +29,7 @@ const BodyContent = ({homeData, socialLinks}: contentType) => (
       <h1>{homeData.welcome_note}</h1>
       <p>{homeData.welcome_description}</p>
 
-      <button>Download C.V</button>
+      <a href={homeData.cv_link} download target="_blank" className='d_button' rel="noreferrer">Download C.V</a>
     </div>
     <div className="visualArea">
       <div className="cover">
@@ -46,7 +46,7 @@ const BodyContent = ({homeData, socialLinks}: contentType) => (
 )
 
 const SocialLink = ({item}:{item: socialLinkType}) => (
-  <a href={item.link} target="_blank" className="link-item">
+  <a href={item.link} target="_blank" className="link-item" rel="noreferrer">
       <Image width="24" height="24" alt={item.name} src={item.icon} />
   </a>
 )
