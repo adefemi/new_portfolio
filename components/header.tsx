@@ -53,7 +53,9 @@ export const Logo = () => (
 )
 
 export const MenuItem = ({name, linkTo, active}:{name:string, linkTo: string, active: string}) => (
-    <div className={`menu-item ${linkTo === active ? 'active' : ''}`}>
+    <div 
+        className={`menu-item ${linkTo === active ? 'active' : ''}`}
+    >
         <Link href={linkTo}>{name}</Link>
     </div>
 )
