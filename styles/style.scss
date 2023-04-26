@@ -635,3 +635,20 @@ $bg: #FFF8ED;
         height: 50vw;
     }
 }
+
+.doc-card{
+    border: 1px solid rgba(black, 10%);
+    box-shadow: 0px 4px 112px 0 rgba(black, 12%);
+  
+    .titleDoc{
+      padding: 20px;
+      font-weight: 600;
+      color: rgba(black, 70%);
+    }
+  
+    .youtube{
+      iframe{
+        width: 100%;
+      }
+    }
+  }

@@ -1,10 +1,11 @@
+import DocCard from '../components/DocCard'
 import BackgroundSpline from '../components/backgroundSpline'
 import Header from '../components/header'
 import { getBlogs } from '../components/request'
-import { blogType } from '../components/types'
+import { DocType } from '../components/types'
 
 interface contentType {
-  blogs: blogType[]
+  blogs: DocType[]
 }
 
 export default function Blogs({ blogs }: contentType) {
@@ -19,25 +20,13 @@ export default function Blogs({ blogs }: contentType) {
           </div>
 
           <div className="content-grid">
-            {blogs?.map((item, i) => <BlogCard key={i} blog={item} />)}
+            {blogs?.map((item, i) => <DocCard key={i} {...item} />)}
           </div>
         </div>
       </div>
 
     </div>
   )
-}
-
-const BlogCard = ({ blog }: { blog: blogType }) => {
-
-  return <div className="blog-card" style={{ backgroundImage: `url('${blog.cover}')` }}>
-    <div className="description">
-      <a href={blog.link} target="_blank" rel="noreferrer">
-      {blog.title}
-      </a>
-    </div>
-  </div>
-
 }
 
 export const getServerSideProps = async () => {

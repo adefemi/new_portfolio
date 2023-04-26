@@ -38,3 +38,8 @@ export interface blogType {
     cover: string
     link: string
 }
+
+export interface DocType {
+    title: string
+    link: string
+}
